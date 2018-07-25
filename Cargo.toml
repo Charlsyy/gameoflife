@@ -1,0 +1,8 @@
+[package]
+name = "gameoflife"
+version = "0.1.0"
+authors = ["Charly <charly.ahrendts@web.de>"]
+
+[dependencies]
+gdk = "0.7.0"
+gtk = { version = "0.3.0", features = ["v3_22"] }

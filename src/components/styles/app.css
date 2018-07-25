@@ -1,0 +1,22 @@
+.hello-btn {
+    background: rgb(212, 17, 17);
+    
+    
+}
+headerbar {
+    border:0;
+    background:rgb(32, 32, 32);
+    color: red;
+}
+window {
+    color: green;
+    background:rgb(207, 198, 198);
+}
+
+.black-btn {
+    background: black;
+}
+
+.main_container {
+    background: blue;
+}
