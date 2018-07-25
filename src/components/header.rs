@@ -2,7 +2,6 @@ use gtk::*;
 pub struct Header {
     pub container: HeaderBar,
     //pub hello_btn: Button,
-
 }
 impl Header {
     pub fn new() -> Header {
@@ -13,12 +12,16 @@ impl Header {
         let other_button = Button::new_with_label("Test!");
         container.pack_start(&hello_btn);
         container.pack_start(&other_button);
-        hello_btn.get_style_context().map(|c| c.add_class("hello-btn"));
-        other_button.get_style_context().map(|c| c.add_class("hello-btn"));
+        hello_btn
+            .get_style_context()
+            .map(|c| c.add_class("hello-btn"));
+        other_button
+            .get_style_context()
+            .map(|c| c.add_class("hello-btn"));
 
-Header {
+        Header {
             container,
-            //hello_btn,       
+            //hello_btn,
         }
     }
 }
