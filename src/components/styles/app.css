@@ -1,7 +1,5 @@
 .hello-btn {
-    background: rgb(212, 17, 17);
-    
-    
+    background: rgb(212, 17, 17);   
 }
 headerbar {
     border:0;
@@ -9,12 +7,23 @@ headerbar {
     color: red;
 }
 window {
-    color: green;
     background:rgb(207, 198, 198);
+}
+
+button.toggle:active {
+    background: rgb(29, 13, 175);
+}
+
+button:checked{
+    background: black;
 }
 
 .black-btn {
     background: black;
+}
+
+.white-btn {
+    background: white;
 }
 
 .main_container {

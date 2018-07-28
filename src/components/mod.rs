@@ -4,6 +4,8 @@ use gtk;
 use gtk::*;
 use gtk::traits::*;
 use gdk;
+//use gdk::*;
+use gdk::RGBA;
 
 use gdk::prelude::*;
 //use gdk::{EventMask, ModifierType};
@@ -21,7 +23,8 @@ impl App {
             println!("failed to init GTK");
             process::exit(1);
         }
-        let mut buttons = vec![vec![Button::new(); 10]; 10];
+        let mut buttons = vec![vec![ToggleButton::new(); 10]; 10];
+        let mut clonebuttons = vec![vec![ToggleButton::new().clone(); 10]; 10];
 
         let window = Window::new(WindowType::Toplevel);
         window.set_hexpand(true);
@@ -46,20 +49,26 @@ impl App {
         window.add(&main_container);
         for i in 0..10 {
             for k in 0..10 {
-                buttons[i][k] = Button::new();
+                buttons[i][k] = ToggleButton::new();
                 buttons[i][k].set_hexpand(true);
                 buttons[i][k].set_vexpand(true);
             }
         }
 
-        // let button_clone = buttons[0][0].clone();
-
-        // buttons[0][0].connect_clicked(move |_| {
-        //     button_clone.get_style_context().map(|c| c.add_class("black-btn"));
-        // });
-
         for i in 0..10 {
             for k in 0..10 {
+                let clonebutton = buttons[i][k].clone();
+                buttons[i][k].connect_clicked(move |_| {
+                    if (clonebutton.get_active() == true) {
+
+                    } else {
+
+                    }
+                });
+            }
+        }
+        for i in 0..10 {
+            for k in 1..10 {
                 main_container.attach(&buttons[i][k], (i as i32), ((k) as i32), 1, 1);
             }
         }
