@@ -6,3 +6,4 @@ authors = ["Charly <charly.ahrendts@web.de>"]
 [dependencies]
 gdk = "0.7.0"
 gtk = { version = "0.3.0", features = ["v3_22"] }
+rustc-serialize = "0.3.24"
